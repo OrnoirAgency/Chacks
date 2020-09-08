@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Settings.SettingsActivity">
+
+    <ImageView
+        android:id="@+id/imageParametre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/ic_parametre_profil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/card_profil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:text="@string/profile"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageParametre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageParametre"
+        app:layout_constraintTop_toTopOf="@+id/imageParametre" />
+
+
+    <ImageView
+        android:id="@+id/imageconfi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/ic_confidentialite"
+        app:layout_constraintStart_toStartOf="@+id/imageParametre"
+        app:layout_constraintTop_toBottomOf="@+id/imageParametre" />
+    <TextView
+        android:id="@+id/card_confi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:text="@string/confidentiality"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageconfi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageconfi"
+        app:layout_constraintTop_toTopOf="@+id/imageconfi" />
+
+
+    <ImageView
+        android:id="@+id/imagenotif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/ic_notificationicon"
+        app:layout_constraintStart_toStartOf="@+id/imageconfi"
+        app:layout_constraintTop_toBottomOf="@+id/imageconfi" />
+    <TextView
+        android:id="@+id/card_notif"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:text="Notifications"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imagenotif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagenotif"
+        app:layout_constraintTop_toTopOf="@+id/imagenotif"/>
+
+
+    <ImageView
+        android:id="@+id/imageApropos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/ic_apropos"
+        app:layout_constraintStart_toStartOf="@+id/imagenotif"
+        app:layout_constraintTop_toBottomOf="@+id/imagenotif" />
+
+    <TextView
+        android:id="@+id/card_about"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:text="@string/about_chacks"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageApropos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageApropos"
+        app:layout_constraintTop_toTopOf="@+id/imageApropos" />
+
+
+    <ImageView
+        android:id="@+id/imageThemes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/ic_theme"
+        app:layout_constraintStart_toStartOf="@+id/imageApropos"
+        app:layout_constraintTop_toBottomOf="@+id/imageApropos" />
+
+    <TextView
+        android:id="@+id/card_theme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:text="Themes"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageThemes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageThemes"
+        app:layout_constraintTop_toTopOf="@+id/imageThemes" />
+
+
+    <ImageView
+        android:id="@+id/imageHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/ic_help"
+        app:layout_constraintStart_toStartOf="@+id/imageThemes"
+        app:layout_constraintTop_toBottomOf="@+id/imageThemes" />
+
+    <TextView
+        android:id="@+id/card_help"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:text="@string/help"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageHelp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageHelp"
+        app:layout_constraintTop_toTopOf="@+id/imageHelp" />
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

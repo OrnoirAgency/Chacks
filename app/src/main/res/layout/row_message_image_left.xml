@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/messageLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <me.alvince.android.avatarimageview.AvatarImageView
+        android:id="@+id/messageImage"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_180sdp"
+        android:layout_marginStart="8dp"
+        android:scaleType="centerCrop"
+        app:img_roundedCorner="@dimen/_12sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="02/03/2020 05:10PM"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageImage" />
+
+    <TextView
+        android:id="@+id/isSeenTv"
+        android:layout_width="@dimen/_12sdp"
+        android:layout_height="@dimen/_12sdp"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/messageTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

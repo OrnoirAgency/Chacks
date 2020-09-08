@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignTop="@id/videoMessage"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:visibility="visible"
+        app:civ_circle_background_color="@color/secondaryColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <me.alvince.android.avatarimageview.AvatarImageView
+        android:id="@+id/videoMessage"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/imgAvatar"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgAvatar" />
+
+
+    <ImageButton
+        android:id="@+id/btnPlayVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/videoMessage"
+        app:layout_constraintEnd_toEndOf="@+id/videoMessage"
+        app:layout_constraintStart_toStartOf="@+id/videoMessage"
+        app:layout_constraintTop_toTopOf="@+id/videoMessage"
+        app:srcCompat="@drawable/ic_play" />
+
+
+    <TextView
+        android:id="@+id/timeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/videoMessage"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/videoMessage"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/small_text"
+        app:layout_constraintBottom_toBottomOf="@+id/videoMessage"
+        app:layout_constraintStart_toEndOf="@+id/videoMessage"
+        tools:text="10:00 AM" />
+
+
+    <TextView
+        android:id="@+id/senderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toEndOf="@id/imgAvatar"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/small_text"
+        app:layout_constraintBottom_toTopOf="@+id/videoMessage"
+        app:layout_constraintEnd_toStartOf="@+id/videoMessage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Sender Name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

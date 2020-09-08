@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/logo"
+        android:icon="@drawable/ic_chacks_name"
+        android:title="@string/chacks"
+        />
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search_btn"
+        android:title="@string/search"
+        />
+
+    <item
+        android:id="@+id/message"
+        android:icon="@drawable/ic_chat_home_btn"
+        android:title="@string/message"
+         />
+</menu>

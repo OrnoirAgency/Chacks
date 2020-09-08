@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/launcher"
+    android:orientation="vertical"
+    tools:context=".Login.VerificationCodeActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvToolbarBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="4dp"
+                android:singleLine="true"
+                android:textColor="@color/whiteWhite"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvToolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="2dp"
+                android:layout_toRightOf="@+id/tvToolbarBack"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:textColor="@color/whiteWhite"
+            android:gravity="center"
+            android:text="@string/we_sent_you_a_6_digit_code"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDigit1"
+                style="@style/etDigits"
+                android:textColor="@color/whiteWhite"
+                android:nextFocusDown="@+id/etDigit2" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDigit2"
+                style="@style/etDigits"
+                android:textColor="@color/whiteWhite"
+                android:nextFocusDown="@+id/etDigit3" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDigit3"
+                style="@style/etDigits"
+                android:textColor="@color/whiteWhite"
+                android:nextFocusDown="@+id/etDigit4" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDigit4"
+                style="@style/etDigits"
+                android:textColor="@color/whiteWhite"
+                android:nextFocusDown="@+id/etDigit5" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDigit5"
+                style="@style/etDigits"
+                android:textColor="@color/whiteWhite"
+                android:nextFocusDown="@+id/etDigit6" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDigit6"
+                android:textColor="@color/whiteWhite"
+                style="@style/etDigits" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llContinue"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/spinner_border"
+            android:gravity="center"
+            android:textAlignment="center">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnContinue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:text="@string/_continue"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/_16sdp" />
+
+            <ProgressBar
+                android:id="@+id/pbVerify"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlResend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/spinner_border"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_3sdp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnResendCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:enabled="false"
+                android:text="@string/Resend"
+                android:textAllCaps="false"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/_16sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCountDownTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/btnResendCode"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@+id/btnResendCode"
+                android:gravity="center"
+                android:maxLines="1"
+                android:minWidth="20dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/textColorPrimary"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

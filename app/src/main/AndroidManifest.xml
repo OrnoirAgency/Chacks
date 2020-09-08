@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ornoiragency.chacks">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".Chacks"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Activity.MessagesActivity"></activity>
+        <activity android:name=".Post.PostSearchActivity" />
+        <activity android:name=".Activity.DownloadSongActivity" />
+        <activity android:name=".Activity.DownloadManagerActivity" />
+        <activity android:name=".Activity.SendVideoFilesActivity" />
+        <activity android:name=".Activity.SendMediaFilesActivity" />
+        <activity android:name=".Activity.PlayMessageVideoActivity" />
+        <activity android:name=".Login.CountryCodeActivity" />
+        <activity android:name=".Login.PhoneNumberActivity" />
+        <activity android:name=".Login.VerificationCodeActivity" />
+        <activity android:name=".Post.AllVideoPostActivity" />
+        <activity android:name=".Post.PostAudioDetailActivity" />
+        <activity android:name=".Post.PostVideoDetailActivity" />
+        <activity android:name=".Post.PostVideoActivity" />
+        <activity android:name=".Post.PostAudioActivity" />
+        <activity android:name=".Login.SetupActivity" />
+        <activity android:name=".Post.PostTextDetailActivity" />
+        <activity android:name=".Settings.AboutActivity" />
+        <activity android:name=".Settings.NotificationActivity" />
+        <activity android:name=".Settings.ThemeActivity" />
+        <activity android:name=".Login.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Post.PostLikedByActivity" />
+        <activity android:name=".Post.AddPostActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Post.PostTextActivity"
+            android:theme="@style/Theme.AppCompat.DayNight">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Settings.SettingsActivity" />
+        <activity android:name=".Post.PostDetailActivity" />
+        <activity android:name=".Activity.ChatActivity" />
+        <activity android:name=".ChatGroup.GroupEditAddActivity" />
+        <activity android:name=".ChatGroup.GroupInfoActivity" />
+        <activity android:name=".ChatGroup.GroupParticipantAddActivity" />
+        <activity android:name=".ChatGroup.GroupChatActivity" />
+        <activity android:name=".ChatGroup.CreateGroupActivity" />
+        <activity android:name=".Activity.AllUserProfileActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Activity.EditProfileActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <service
+            android:name=".Notification.MyFirebaseMessaging"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Notification.MyFirebaseIdService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+            android:value="ocr" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.ornoiragency.chacks.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".Services.NotificationActionService" />
+
+        <service android:name=".Services.OnClearFromRecentService" />
+    </application>
+
+</manifest>

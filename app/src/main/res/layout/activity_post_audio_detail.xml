@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:id="@+id/root_view"
+    tools:context=".Post.PostAudioDetailActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/commentLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/audio_cover"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300sdp"
+                android:src="@drawable/image_placeholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300sdp"
+                android:background="#B3000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleImageView3"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_110sdp"
+                android:src="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toBottomOf="@+id/audio_play_pause"
+                app:layout_constraintEnd_toEndOf="@+id/audio_play_pause"
+                app:layout_constraintStart_toStartOf="@+id/audio_play_pause"
+                app:layout_constraintTop_toTopOf="@+id/audio_play_pause" />
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/bufferProgress"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginBottom="24dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/circleImageView3"
+                app:layout_constraintEnd_toEndOf="@+id/circleImageView3"
+                app:layout_constraintStart_toStartOf="@+id/circleImageView3"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/music_play" />
+
+            <ImageView
+                android:id="@+id/audio_play_pause"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/ic_play_circle"
+                app:layout_constraintBottom_toBottomOf="@+id/audio_cover"
+                app:layout_constraintEnd_toEndOf="@+id/audio_cover"
+                app:layout_constraintStart_toStartOf="@+id/audio_cover"
+                app:layout_constraintTop_toTopOf="@+id/audio_cover" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:indeterminate="true"
+                android:src="@drawable/ic_play_circle"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/audio_cover"
+                app:layout_constraintEnd_toEndOf="@+id/audio_cover"
+                app:layout_constraintStart_toStartOf="@+id/audio_cover"
+                app:layout_constraintTop_toTopOf="@+id/audio_cover" />
+
+
+            <LinearLayout
+                android:id="@+id/chatLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/playPauseBtn"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/audio_cover">
+
+
+                <TextView
+                    android:id="@+id/currentTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:text="00"
+                    android:textColor="@color/whiteWhite" />
+
+                   <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:backgroundTint="@color/whiteWhite"
+                    android:inputType="textMultiLine|textCapSentences" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_marginStart="1dp"
+                android:background="@color/iconHome"
+                app:layout_constraintEnd_toEndOf="@+id/audio_cover"
+                app:layout_constraintStart_toStartOf="@+id/audio_cover"
+                app:layout_constraintTop_toBottomOf="@+id/audio_cover" />
+
+            <com.vanniktech.emoji.EmojiTextView
+                android:id="@+id/pDescriptionTv_audio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:autoLink="all"
+                android:background="@drawable/background_description_home"
+                android:fontFamily="@font/abel"
+                android:linksClickable="true"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingTop="@dimen/_28sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@color/textColorPrimary"
+                android:textColorLink="@color/icon_checked"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintEnd_toEndOf="@+id/view5"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/view5"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/drawdetail_texte"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_4sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/view5"
+                app:layout_constraintTop_toBottomOf="@+id/view5">
+
+                <ImageView
+                    android:id="@+id/shareBtn"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:src="@drawable/ic_share_home_icon" />
+
+                <ImageView
+                    android:id="@+id/likeBtn_audio"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:src="@drawable/ic_like_publication_icon" />
+
+                <TextView
+                    android:id="@+id/pLikesTv_audio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:text="@string/like"
+                    android:textColor="@color/whiteWhite" />
+
+                <ImageView
+
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:src="@drawable/ic_coment_publication_icon" />
+
+                <TextView
+                    android:id="@+id/pCommentTv_audio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:text="@string/comment"
+                    android:textColor="@color/whiteWhite" />
+
+            </LinearLayout>
+
+            <!--list of comment here -->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pDescriptionTv_audio"
+                app:stackFromEnd="true" />
+
+            <TextView
+                android:id="@+id/totalDurationTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@null"
+                android:padding="10dp"
+                android:text="00"
+                android:textColor="@color/whiteWhite"
+                app:layout_constraintEnd_toEndOf="@+id/circleImageView3"
+                app:layout_constraintStart_toStartOf="@+id/circleImageView3"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/commentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cAvatarIv"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/profile_image"
+            app:layout_constraintBottom_toBottomOf="@+id/commentEt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/commentEt"
+            app:layout_constraintVertical_bias="0.81" />
+
+        <com.vanniktech.emoji.EmojiEditText
+            android:id="@+id/commentEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:background="@drawable/ic_bg_message"
+            android:focusable="true"
+            android:hint="@string/add_comment"
+            android:maxHeight="@dimen/_100sdp"
+            android:imeOptions="actionSend"
+            android:inputType="textCapSentences|textMultiLine"
+            android:linksClickable="true"
+            android:padding="@dimen/_8sdp"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/main_activity_emoji"
+            app:layout_constraintStart_toEndOf="@+id/cAvatarIv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/main_activity_emoji"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@null"
+            android:src="@drawable/ic_emoti_home"
+            app:layout_constraintBottom_toBottomOf="@+id/commentEt"
+            app:layout_constraintEnd_toStartOf="@+id/sendBtn"
+            app:layout_constraintTop_toTopOf="@+id/commentEt"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <ImageButton
+            android:id="@+id/sendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/ic_send_message"
+            app:layout_constraintBottom_toBottomOf="@+id/main_activity_emoji"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/main_activity_emoji"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#000A9CAC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/uPictureIv_audio"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_28sdp"
+                android:src="@drawable/profile_image"
+                app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/uNameTv_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/abel"
+                android:text="Username"
+                android:textColor="@color/whiteWhite"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintBottom_toTopOf="@+id/pTimeTv_audio"
+                app:layout_constraintEnd_toStartOf="@+id/uPictureIv_audio"
+                app:layout_constraintTop_toTopOf="@+id/uPictureIv_audio" />
+
+            <TextView
+                android:id="@+id/pTimeTv_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abel"
+                android:text="Blog Post Date"
+                android:textColor="@color/whiteWhite"
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/uPictureIv_audio"
+                app:layout_constraintEnd_toEndOf="@+id/uNameTv_audio"
+                app:layout_constraintTop_toBottomOf="@+id/uNameTv_audio" />
+
+            <ImageView
+                android:id="@+id/backImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_back_icon"
+                android:backgroundTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/abel"
+                android:text="@string/audio_publication"
+                android:textColor="@color/whiteWhite"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/backImage"
+                app:layout_constraintStart_toEndOf="@+id/backImage"
+                app:layout_constraintTop_toTopOf="@+id/backImage" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+</androidx.constraintlayout.widget.ConstraintLayout>

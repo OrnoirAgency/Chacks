@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    tools:context=".Post.PostAudioActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/global_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_background_music"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/_28sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_65sdp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:layout_marginBottom="@dimen/_28sdp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/custom_progressbar_drawable"
+            android:secondaryProgress="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/post_audio_cover"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:src="@drawable/music"
+            app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar"
+            app:layout_constraintStart_toStartOf="@+id/progressBar"
+            app:layout_constraintTop_toTopOf="@+id/progressBar" />
+
+
+
+        <TextView
+            android:id="@+id/post_audio_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/oswald_bold"
+            android:text="Title"
+            android:textColor="#000"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toEndOf="@+id/post_audio_cover"
+            app:layout_constraintTop_toTopOf="@+id/post_audio_cover" />
+
+        <TextView
+            android:id="@+id/post_audio_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artist"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/post_audio_cover"
+            app:layout_constraintStart_toStartOf="@+id/post_audio_title"
+            app:layout_constraintTop_toBottomOf="@+id/post_audio_title"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/totalDurationTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="8dp"
+            android:text="00:00"
+            app:layout_constraintBottom_toBottomOf="@+id/post_audio_cover"
+            app:layout_constraintStart_toStartOf="@+id/post_audio_artist"
+            app:layout_constraintTop_toBottomOf="@+id/post_audio_artist" />
+
+        <ImageView
+            android:id="@+id/playPauseBtn"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/ic_play"
+            app:layout_constraintBottom_toBottomOf="@+id/post_audio_cover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/post_audio_cover" />
+
+        <ProgressBar
+            android:id="@+id/post_audi_load"
+            android:visibility="gone"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/ic_play"
+            app:layout_constraintBottom_toBottomOf="@+id/post_audio_cover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/post_audio_cover" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/audio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="pick Audio"/>
+
+    <Button
+        android:id="@+id/audio_pick_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="pick Cover"/>
+
+    <TextView
+        android:id="@+id/post_audio_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cc_custom_left_bubble"
+        android:maxLength="125"/>
+
+    <EditText
+        android:id="@+id/post_song_artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/cc_custom_left_bubble"
+        android:ems="10"
+        android:hint="artist"
+        android:inputType="textMultiLine"
+        android:maxLength="125"
+        android:padding="16dp"/>
+
+    <EditText
+        android:id="@+id/post_song_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="title"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/cc_custom_left_bubble"
+        android:inputType="textMultiLine"
+        android:maxLength="125"
+        android:padding="16dp"/>
+
+
+    <EditText
+        android:id="@+id/post_song_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="description"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/cc_custom_left_bubble"
+        android:inputType="textMultiLine"
+        android:maxLength="125"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/post_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="clic to post"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimaryDark"/>
+
+</LinearLayout>

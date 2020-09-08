@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/messageLayout"
+    android:padding="10dp">
+
+    <com.vanniktech.emoji.EmojiTextView
+        android:id="@+id/messageTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:autoLink="all"
+        android:background="@drawable/bg_sender_redesign"
+        android:maxWidth="@dimen/_250sdp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        android:text="His message"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:text="02/03/2020 05:10PM"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/isSeenTv"
+        app:layout_constraintEnd_toStartOf="@+id/isSeenTv"
+        app:layout_constraintTop_toTopOf="@+id/isSeenTv" />
+
+    <TextView
+        android:id="@+id/isSeenTv"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:textAlignment="center"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/messageTv"
+        app:layout_constraintTop_toBottomOf="@+id/messageTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

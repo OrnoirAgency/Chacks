@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#0A9CAC</color>
+    <color name="colorPrimaryDark">#0290A0</color>
+    <color name="colorAccent">#48E0F1</color>
+
+    <color name="launcher">#0A9CAC</color>
+    <color name="launcher2">#0A9CAC</color>
+    <color name="whiteWhite">#FFFFFF</color>
+    <color name="btnValid">#FFFFFF</color>
+    <color name="textColorPrimary">#121212</color>
+    <color name="iconHome">#FF0A9CAC</color>
+
+    <color name="bgHome">#FFFFFF</color>
+    <color name="bgHomeSec">#DDDDDD</color>
+    <color name="background">#ffffff</color>
+    <color name="transparentBtn">#E5FFFFFF</color>
+    <color name="commentBackground">#26099AAA</color>
+
+
+
+
+
+
+
+
+    <color name="welcome">#48E0F1</color>
+    <color name="icon">#B2B2B2</color>
+    <color name="logo">#FFFFFF</color>
+    <color name="chat_background">#E9DBB8</color>
+    <color name="icon_checked">#0A9CAC</color>
+    <color name="main_menu">#F1F1F1</color>
+    <color name="tabItemSelected">#FFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="colorShape">#ffffff</color>
+
+    <color name="daynight_textColor">#ff8222</color>
+    <color name="switchColor">#BC2F1D</color>
+    <color name="next">#0A9CAC</color>
+
+
+    <color name="primaryColor_dark">#121212</color>
+    <color name="primaryColorDark_dark">#1F1B24</color>
+    <color name="primaryAccent_dark">#fafafa</color>
+
+    <color name="primaryColor">#fafafa</color>
+    <color name="primaryLightColor">#ffffff</color>
+    <color name="primaryDarkColor">#c7c7c7</color>
+
+    <color name="lightGray">#F2F2F2</color>
+    <color name="disabledBtnBg">#999999</color>
+
+    <color name="bannar">#F0F0F0</color>
+    <color name="secondaryColor">#1976d2</color>
+    <color name="secondaryLightColor">#63a4ff</color>
+    <color name="secondaryDarkColor">#004ba0</color>
+    <color name="primaryTextColor">#FF000000</color>
+    <color name="video_background">#263238</color>
+    <color name="secondaryTextColor">#6b000000</color>
+    <color name="popup_gallary">#AB47BC</color>
+    <color name="popup_camera">#66BB6A</color>
+    <color name="popup_audio">#FFA726</color>
+    <color name="popup_whiteboard">#5C6BC0</color>
+    <color name="popup_document">#EF5350</color>
+    <color name="error">#c62828</color>
+    <color name="shimmer_background">#dddddd</color>
+    <color name="green_600">#43A047</color>
+    <color name="green_100">#C8E6C9</color>
+    <color name="red_100">#FFCDD2</color>
+    <color name="red_600">#E53935</color>
+    <color name="selection">#dddddd</color>
+
+    <color name="yellow">#FFFC01</color>
+    <color name="white">#ffffff</color>
+    <color name="unselected">#ffffff</color>
+    <color name="text">#202124</color>
+    <color name="black">#000000</color>
+    <color name="blackTransparent">#81000000</color>
+
+    <color name="controllerTransparent">#00000000</color>
+
+
+</resources>

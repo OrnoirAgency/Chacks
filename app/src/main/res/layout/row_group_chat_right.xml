@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_sender"
+    android:layout_marginStart="@dimen/_100sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:padding="@dimen/_8sdp">
+
+    <me.alvince.android.avatarimageview.AvatarImageView
+        android:id="@+id/userImage"
+        android:scaleType="centerCrop"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:src="@drawable/profile_image"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_16sdp"/>
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:text="name"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/messageTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:text="the message"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/messageIv"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_placeholder"/>
+
+    <TextView
+        android:id="@+id/timeTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:text="time"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:textSize="@dimen/_12sdp"/>
+
+</LinearLayout>

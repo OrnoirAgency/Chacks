@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        android:visible="true" />
+
+
+
+    <item
+        android:id="@+id/nav_group"
+        android:icon="@drawable/ic_group"
+        android:title="@string/groups"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/nav_chat"
+        android:icon="@drawable/ic_chat"
+        android:title="Chats"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/nav_notifications"
+        android:icon="@drawable/ic_notificate"
+        android:title="Notification"
+        android:visible="true" />
+
+
+    <item
+        android:id="@+id/nav_friends"
+        android:icon="@drawable/ic_friend"
+        android:title="@string/friends"
+        android:visible="true" />
+
+
+</menu>
